@@ -35,9 +35,45 @@ public class UserControllerTest {
 		.param("age","18")
 		.param("ageTo", "20")
 		.param("xxx", "yyy")
-
 		.contentType(MediaType.APPLICATION_JSON_UTF8))
 		.andExpect(status().isOk())
-		.andExpect(jsonPath("$.length()").value(3));
+		.andExpect(jsonPath("$.length()").value(4));
 	}
+	
+	@Test
+	public void whenGetInfoSuccess() throws Exception {
+		mockmvc.perform(get("/user/1")
+				.contentType(MediaType.APPLICATION_JSON_UTF8))
+		.andExpect(status().isOk())
+		.andExpect(jsonPath("$.username").value("tom"));
+	}
+	
+	@Test
+	public void whenGetInfoFail() throws Exception {
+		mockmvc.perform(get("/user/a")
+				.contentType(MediaType.APPLICATION_JSON_UTF8))
+		.andExpect(status().is4xxClientError());
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
