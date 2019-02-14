@@ -2,12 +2,13 @@
 package com.xupt.dto;
 
 public class UserQueryCondition {
+
 	private String username;
-	
+
 	private int age;
-	
+
 	private int ageTo;
-	
+
 	private String xxx;
 
 	public String getUsername() {
@@ -41,7 +42,5 @@ public class UserQueryCondition {
 	public void setXxx(String xxx) {
 		this.xxx = xxx;
 	}
-	
-	
 
 }
