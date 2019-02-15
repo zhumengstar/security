@@ -10,7 +10,7 @@
 	</parent>
 
 	<dependencies>
-		<dependency>
+		 <dependency>
 			<groupId>com.xupt.security</groupId>
 			<artifactId>xupt-security-browser</artifactId>
 			<version>${xupt.security.version}</version>
@@ -41,6 +41,7 @@
 			<groupId>com.github.tomakehurst</groupId>
 			<artifactId>wiremock</artifactId>
 		</dependency>
+		
 	</dependencies>
 
 	<build>

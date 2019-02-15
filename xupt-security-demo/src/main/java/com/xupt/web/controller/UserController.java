@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.xupt.dto.User;
 import com.xupt.dto.UserQueryCondition;
 
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -85,7 +86,9 @@ public class UserController {
 //	@RequestMapping(value = "/user/{id:\\d+}", method = RequestMethod.GET)
 	@GetMapping("/{id:\\d+}")
 	@JsonView(User.UserDetailView.class)
-	public User getInfo(@PathVariable(name = "id") String idxxxxx) {
+	public User getInfo(@PathVariable(name = "id") String id) {
+//		throw new UserNotExistException(id);
+		System.out.println("进入getInfo服务");
 		User user = new User();
 		user.setUsername("tom");
 		return user;
