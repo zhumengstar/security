@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
  * @author zgh
  *
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class TimeAspect {
 	@Around("execution(* com.xupt.web.controller.UserController.*(..))")
 	public Object handleControllerMethod(ProceedingJoinPoint pjp) throws Throwable {

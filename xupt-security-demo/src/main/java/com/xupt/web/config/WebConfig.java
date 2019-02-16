@@ -17,8 +17,8 @@ import com.xupt.web.interceptor.TimeInterceptor;
 public class WebConfig extends WebMvcConfigurerAdapter{
 	
 	
-	@Autowired
-	private TimeInterceptor timeInterceptor;
+//	@Autowired
+//	private TimeInterceptor timeInterceptor;
 	
 	/**
 	 * 没法拿到方法参数的值
@@ -28,9 +28,9 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		// TODO Auto-generated method stub
-		registry.addInterceptor(timeInterceptor);
+//		registry.addInterceptor(timeInterceptor);
 	}
-	@Bean
+//	@Bean
 	public FilterRegistrationBean timeFilter() {
 		
 		FilterRegistrationBean registrationBean=new FilterRegistrationBean();

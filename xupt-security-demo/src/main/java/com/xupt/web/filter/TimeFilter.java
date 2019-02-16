@@ -10,14 +10,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.springframework.stereotype.Component;
-
 /**
  * 可你拿到原始的http请求和响应信息，缺点是拿不到处理请求方法的信息
  * @author zgh
  *
  */
-@Component
+//@Component
 public class TimeFilter implements Filter {
 
 	@Override

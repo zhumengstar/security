@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author zgh
  *
  */ 
-@Component
+//@Component
 public class TimeInterceptor implements HandlerInterceptor {
 
 	@Override
