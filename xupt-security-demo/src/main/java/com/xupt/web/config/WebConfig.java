@@ -15,9 +15,16 @@ import com.xupt.web.interceptor.TimeInterceptor;
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter{
+	
+	
 	@Autowired
 	private TimeInterceptor timeInterceptor;
 	
+	/**
+	 * 没法拿到方法参数的值
+	 * @author zgh
+	 *
+	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		// TODO Auto-generated method stub

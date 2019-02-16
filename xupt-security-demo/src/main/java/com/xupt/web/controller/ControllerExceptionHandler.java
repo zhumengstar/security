@@ -16,6 +16,7 @@ import com.xupt.exceptions.UserNotExistException;
  * @author zgh
  *
  */
+//afterComplate之前捕获了异常
 @ControllerAdvice
 public class ControllerExceptionHandler {
 	
