@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.xupt.security.core.properties.SecurityProperties",
+      "name": "xupt.security",
+      "type": "com.xupt.security.core.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.xupt.security.core.properties.SecurityProperties",
+      "name": "xupt.security.browser-properties",
+      "type": "com.xupt.security.core.properties.BrowserProperties"
+    }
+  ]
+}
