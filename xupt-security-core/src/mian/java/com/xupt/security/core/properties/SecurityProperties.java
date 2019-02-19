@@ -4,14 +4,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix="xupt.security")
 public class SecurityProperties {
-	private BrowserProperties browserProperties=new BrowserProperties();
-
+	private BrowserProperties browser=new BrowserProperties();
+	
 	public BrowserProperties getBrowserProperties() {
-		return browserProperties;
+		return browser;
 	}
 
-	public void setBrowserProperties(BrowserProperties browserProperties) {
-		this.browserProperties = browserProperties;
+	public void setBrowserProperties(BrowserProperties browser) {
+		this.browser = browser;
 	}
 	
 	
