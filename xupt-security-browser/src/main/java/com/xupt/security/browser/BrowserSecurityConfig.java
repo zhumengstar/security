@@ -35,17 +35,17 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 		//自定义filter，放在UsernamePasswordAuthenticationFilter之前
 		ValidateCodeFilter validateCodeFilter=new ValidateCodeFilter();
 		validateCodeFilter.setAuthenticationFailureHandler(xuptAuthenticationFailureHandler);
+		validateCodeFilter.setSecurityProperties(securityProperties);
+		validateCodeFilter.afterPropertiesSet();
 		
-		// TODO Auto-generated method stub
-//		super.configure(http);
-		System.out.println(securityProperties.getBrowserProperties().getLoginPage());
+		System.out.println(securityProperties.getBrowser().getLoginPage());
 		http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
 				.formLogin().loginPage("/authentication/require")
 				.loginProcessingUrl("/authentication/form")
 				.successHandler(xuptAuthenticationSuccessHandler)
 				.failureHandler(xuptAuthenticationFailureHandler)
 //		http.httpBasic()
-				.and().authorizeRequests().antMatchers("/authentication/require",securityProperties.getBrowserProperties().getLoginPage(),"/code/image").permitAll()
+				.and().authorizeRequests().antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/code/image").permitAll()
 				.anyRequest().authenticated()
 				.and().csrf().disable();
 	}

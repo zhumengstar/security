@@ -10,8 +10,13 @@
   "properties": [
     {
       "sourceType": "com.xupt.security.core.properties.SecurityProperties",
-      "name": "xupt.security.browser-properties",
+      "name": "xupt.security.browser",
       "type": "com.xupt.security.core.properties.BrowserProperties"
+    },
+    {
+      "sourceType": "com.xupt.security.core.properties.SecurityProperties",
+      "name": "xupt.security.code",
+      "type": "com.xupt.security.core.properties.ValidateCodeProperties"
     }
   ]
 }

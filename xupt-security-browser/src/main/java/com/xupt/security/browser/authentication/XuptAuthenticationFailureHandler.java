@@ -34,7 +34,7 @@ public class XuptAuthenticationFailureHandler extends SimpleUrlAuthenticationFai
 			AuthenticationException exception) throws IOException, ServletException {
 		logger.info("登录失败");
 		
-		if(LoginResponseType.JSON.equals(securityProperties.getBrowserProperties().getLoginType())) {
+		if(LoginResponseType.JSON.equals(securityProperties.getBrowser().getLoginType())) {
 			response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
 			response.setContentType("application/json;charset=utf-8");
 			response.getWriter().write(objectMapper.writeValueAsString(new SimpleResponse(exception.getMessage())));
